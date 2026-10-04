@@ -1,0 +1,40 @@
+*{box-sizing:border-box}
+body{margin:0;font-family:Segoe UI,Arial,sans-serif;background:#0f172a;color:#e2e8f0}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 22px;background:#1e293b;border-bottom:2px solid #334155}
+h1{font-size:1.15rem;margin:0}
+h2{font-size:1rem;margin:0 0 10px;display:flex;justify-content:space-between;align-items:center}
+.badge{padding:5px 12px;border-radius:14px;background:#475569;font-size:.8rem}
+.badge.ok{background:#15803d}.badge.bad{background:#b91c1c}
+main{display:grid;grid-template-columns:1.3fr 1fr;gap:16px;padding:16px}
+.card{background:#1e293b;border-radius:10px;padding:16px;border:1px solid #334155}
+.wide{grid-column:1/-1}
+.live img{width:100%;border-radius:8px;background:#000;min-height:240px}
+.status{margin:10px 0;font-weight:600}
+.status.alert{color:#f87171}.status.ok{color:#4ade80}
+.stats{display:flex;gap:12px;margin-bottom:10px}
+.stats div{flex:1;background:#0f172a;border-radius:8px;padding:8px;text-align:center}
+.stats b{display:block;font-size:1.4rem}.stats span{font-size:.75rem;color:#94a3b8}
+.row{display:flex;gap:8px}
+input[type=text]{flex:1;padding:9px;border-radius:6px;border:1px solid #475569;background:#0f172a;color:#fff}
+button{padding:9px 14px;border:0;border-radius:6px;background:#2563eb;color:#fff;cursor:pointer;font-weight:600}
+button:hover{opacity:.9}button:disabled{opacity:.5;cursor:not-allowed}
+button.danger{background:#b91c1c}button.small{padding:4px 10px;font-size:.75rem}
+.hint{color:#94a3b8;font-size:.82rem;margin:6px 0}
+.progress{height:10px;background:#0f172a;border-radius:6px;overflow:hidden;margin:8px 0}
+#regBar{height:100%;width:0;background:#22c55e;transition:width .2s}
+table{width:100%;border-collapse:collapse;font-size:.85rem;margin-bottom:12px}
+th,td{padding:7px;border-bottom:1px solid #334155;text-align:left}
+td img{height:48px;border-radius:4px;cursor:pointer}
+.banner{background:#b91c1c;color:#fff;padding:12px 22px;font-weight:700;animation:blink 1s infinite}
+.banner button{margin-left:16px;background:#fff;color:#b91c1c}
+@keyframes blink{50%{background:#7f1d1d}}
+.hidden{display:none!important}
+#lightbox{position:fixed;inset:0;background:rgba(0,0,0,.85);display:flex;align-items:center;justify-content:center;z-index:9}
+#lightbox img{max-width:90%;max-height:90%}
+@media(max-width:850px){main{grid-template-columns:1fr}}
+
+select{flex:1;padding:9px;border-radius:6px;border:1px solid #475569;background:#0f172a;color:#fff}
+
+.stage{position:relative;width:100%;background:#000;border-radius:8px;overflow:hidden;min-height:240px}
+.stage video{display:block;width:100%;height:auto}
+.stage canvas{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none}
