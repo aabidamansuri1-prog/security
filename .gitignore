@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Private data - never upload faces or alert snapshots
+data/faces/*
+data/evidence/*
+data/*.db
+data/*.yml
+!data/faces/.keep
+!data/evidence/.keep
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
